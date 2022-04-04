@@ -2,7 +2,7 @@
 
 A demo showing how to use markdown files with [Astro](https://astro.build)
 
-![screenshot](screenshot.jpeg)
+![demo](demo.jpeg)
 
 ## 🚀 Project Structure
 
@@ -12,10 +12,10 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 │   └── favicon.ico
-│   ├── global.css
-│   ├── home.css
 │   ├── logo.svg
+│   ├── reset.css
 │   ├── robots.txt
+│   ├── site.css
 │   ├── syntax.css
 ├── src/
 │   ├── data/
@@ -23,8 +23,9 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── layouts/
 │       └── MainLayout.astro
 │   └── pages/
-│       └── index.astro
+│       └── index.md
 │       └── [slug].astro
+│       └── typography.astro
 └── package.json
 ```
 
@@ -51,9 +52,5 @@ Feel free to check [our documentation](https://github.com/withastro/astro) or ju
 
 ## Credits
 
-- [Astro Starter Theme](https://github.com/withastro/astro/tree/main/examples/starter)
-
-## To-do
-
-- [x] Add page with slug
-- [ ] Add page with only markdown as source
+- [Stijn](https://github.com/stijnvc/holo-alfa)
+- [Armand Philippot](https://github.com/ArmandPhilippot/coldark-prism)

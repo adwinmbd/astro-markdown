@@ -19,33 +19,7 @@ console.log(frontmatter)
 <MainLayout>
 	<article>
 		<h1>{frontmatter.title}</h1>
-		<section>
-			<Content />
-			<!-- {astro.html} -->
-		</section>
+		<Content />
+		<!-- {astro.html} -->
 	</article>
 </MainLayout>
-
-<style>
-	article {
-		padding-top: 2em;
-		line-height: 1.5;
-	}
-
-	section {
-		margin-top: 2em;
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
-		max-width: 70ch;
-	}
-
-	pre,code {
-		font-family: var(--font-mono);
-		border-radius: 4px;
-	}
-
-	pre {
-		padding: 1em 1.5em;
-	}
-</style>

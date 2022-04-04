@@ -1,0 +1,18 @@
+---
+// Layout Import
+import MainLayout from '../layouts/MainLayout.astro';
+
+const post = await Astro.glob('../data/*.md');
+const obj = Object.assign({}, ...post );
+const { Content, frontmatter } = obj;
+const title = frontmatter.title
+
+console.log(obj)
+---
+<MainLayout>
+	<article>
+		<h1>{frontmatter.title}</h1>
+		<Content />
+		<!-- {astro.html} -->
+	</article>
+</MainLayout>
