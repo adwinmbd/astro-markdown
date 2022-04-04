@@ -1,0 +1,32 @@
+---
+let title = 'My Astro Site';
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/syntax.css">
+	<style>
+		header {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			max-width: min(100%, 68ch);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<div>
+				<img width="60" height="80" src="/logo.svg" alt="Astro logo">
+			</div>
+		</header>
+		<slot />
+	</main>
+</body>
+</html>
