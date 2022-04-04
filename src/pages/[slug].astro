@@ -1,0 +1,51 @@
+---
+// Layout Import
+import MainLayout from '../layouts/MainLayout.astro'
+
+export async function getStaticPaths() {
+	const posts = await Astro.glob('../data/*.md');
+
+	return posts.map((post) => {
+		return {
+			params: {slug: post.frontmatter.slug},
+			props: {...post}
+		}
+	})
+}
+
+const {Content, frontmatter} = Astro.props;
+console.log(frontmatter)
+---
+<MainLayout>
+	<article>
+		<h1>{frontmatter.title}</h1>
+		<section>
+			<Content />
+			<!-- {astro.html} -->
+		</section>
+	</article>
+</MainLayout>
+
+<style>
+	article {
+		padding-top: 2em;
+		line-height: 1.5;
+	}
+
+	section {
+		margin-top: 2em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		max-width: 70ch;
+	}
+
+	pre,code {
+		font-family: var(--font-mono);
+		border-radius: 4px;
+	}
+
+	pre {
+		padding: 1em 1.5em;
+	}
+</style>

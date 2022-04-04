@@ -51,9 +51,9 @@ Feel free to check [our documentation](https://github.com/withastro/astro) or ju
 
 ## Credits
 
-- [Astro Starter Theme](hhttps://github.com/withastro/astro/tree/main/examples/starter)
+- [Astro Starter Theme](https://github.com/withastro/astro/tree/main/examples/starter)
 
 ## To-do
 
-- [ ] Add page with slug
+- [x] Add page with slug
 - [ ] Add page with only markdown as source
